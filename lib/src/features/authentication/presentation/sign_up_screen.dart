@@ -3,6 +3,7 @@ import 'package:sarang_app/src/common_widgets/banner_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_button_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_text_button_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_text_field_widget.dart';
+import 'package:sarang_app/src/features/authentication/presentation/sign_up_age_job_screen.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -40,7 +41,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                //const SizedBox(height: AppSize.s50),
                 const BannerWidget(),
                 CustomTextFieldWidget(
                   labelName: 'Full Name',
@@ -63,7 +63,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 CustomButtonWidget(
                   title: 'Get Started',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      SignUpAgeJobScreen.routeName,
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: AppSize.s20,
