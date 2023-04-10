@@ -3,6 +3,7 @@ import 'package:sarang_app/src/common_widgets/custom_button_widget.dart';
 import 'package:sarang_app/src/common_widgets/custom_text_button_widget.dart';
 import 'package:sarang_app/src/common_widgets/logo_and_tagline_widget.dart';
 import 'package:sarang_app/src/common_widgets/upload_photo_widget.dart';
+import 'package:sarang_app/src/features/likes_you/presentation/explore_people_screen.dart';
 import 'package:sarang_app/src/theme_manager/font_manager.dart';
 import 'package:sarang_app/src/theme_manager/style_manager.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
@@ -61,7 +62,12 @@ class _SignUpUploadPhotoScreenState extends State<SignUpUploadPhotoScreen> {
                 ),
                 CustomTextButtonWidget(
                   title: 'Skip for Now',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      ExplorePeopleScreen.routeName,
+                    );
+                  },
                 ),
               ],
             ),
