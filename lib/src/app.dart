@@ -3,6 +3,7 @@ import 'package:sarang_app/src/features/authentication/presentation/sign_up_age_
 import 'package:sarang_app/src/features/authentication/presentation/sign_up_screen.dart';
 import 'package:sarang_app/src/features/authentication/presentation/sign_up_upload_photo_screen.dart';
 import 'package:sarang_app/src/features/likes_you/presentation/explore_people_screen.dart';
+import 'package:sarang_app/src/features/likes_you/presentation/people_profile_screen.dart';
 import 'package:sarang_app/src/features/likes_you/presentation/people_you_loved_screen.dart';
 import 'package:sarang_app/src/theme_manager/theme_data_manager.dart';
 
@@ -25,6 +26,7 @@ class AppScreen extends StatelessWidget {
         ExplorePeopleScreen.routeName: (context) => const ExplorePeopleScreen(),
         PeopleYouLovedScreen.routeName: (context) =>
             const PeopleYouLovedScreen(),
+        PeopleProfileScreen.routeName: (context) => const PeopleProfileScreen(),
       },
     );
   }

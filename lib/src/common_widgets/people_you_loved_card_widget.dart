@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sarang_app/src/features/likes_you/presentation/people_profile_screen.dart';
 import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 import 'package:sarang_app/src/theme_manager/color_manager.dart';
 import 'package:sarang_app/src/theme_manager/font_manager.dart';
@@ -11,42 +12,49 @@ class PeopleYouLovedCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPadding.p24),
-      child: Container(
-        margin: const EdgeInsets.only(
-          bottom: AppMargin.m18,
-        ),
-        decoration: BoxDecoration(
-          color: ColorManager.secondary,
-          borderRadius: BorderRadius.circular(AppSize.s20),
-        ),
-        child: ListTile(
-          contentPadding: const EdgeInsets.all(
-            AppPadding.p10,
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppPadding.p24,
+      ),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, PeopleProfileScreen.routeName);
+        },
+        child: Container(
+          margin: const EdgeInsets.only(
+            bottom: AppMargin.m18,
           ),
-          leading: Container(
-            width: AppSize.s70,
-            height: AppSize.s70,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  '${AssetImageIconManager.assetPath}/people_love3_image.png',
+          decoration: BoxDecoration(
+            color: ColorManager.secondary,
+            borderRadius: BorderRadius.circular(AppSize.s20),
+          ),
+          child: ListTile(
+            contentPadding: const EdgeInsets.all(
+              AppPadding.p10,
+            ),
+            leading: Container(
+              width: AppSize.s70,
+              height: AppSize.s70,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    '${AssetImageIconManager.assetPath}/people_love3_image.png',
+                  ),
                 ),
               ),
             ),
-          ),
-          title: Text(
-            'Ismirada',
-            style: getWhiteTextStyle(
-              fontSize: FontSizeManager.f20,
-              fontWeight: FontWeightManager.semiBold,
+            title: Text(
+              'Ismirada',
+              style: getWhiteTextStyle(
+                fontSize: FontSizeManager.f20,
+                fontWeight: FontWeightManager.semiBold,
+              ),
             ),
-          ),
-          subtitle: Text(
-            '24, Doctor',
-            style: getGrey60TextStyle(),
+            subtitle: Text(
+              '24, Doctor',
+              style: getGrey60TextStyle(),
+            ),
           ),
         ),
       ),
