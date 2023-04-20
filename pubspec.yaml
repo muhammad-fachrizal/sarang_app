@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^4.0.3
   flutter_bloc: ^8.1.2
   shared_preferences: ^2.1.0
+  image_picker: ^0.8.7+3
 
 dev_dependencies:
   flutter_test:
