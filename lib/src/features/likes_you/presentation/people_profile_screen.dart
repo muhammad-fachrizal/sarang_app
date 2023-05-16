@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sarang_app/src/common_widgets/custom_button_widget.dart';
 import 'package:sarang_app/src/common_widgets/people_identity_widget.dart';
 import 'package:sarang_app/src/common_widgets/profile_detail_image_widget.dart';
+import 'package:sarang_app/src/features/likes_you/data/data_hobby_dummy.dart';
 import 'package:sarang_app/src/features/likes_you/domain/user.dart';
 import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
@@ -32,6 +33,7 @@ class PeopleProfileScreen extends StatelessWidget {
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
+                  final hobby = dataHobbyDummy[index];
                   return Container(
                     width: AppSize.s120,
                     height: AppSize.s80,
@@ -42,16 +44,16 @@ class PeopleProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(
                         AppSize.s18,
                       ),
-                      image: const DecorationImage(
+                      image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
-                          '${AssetImageIconManager.assetPath}/hobby2_image.png',
+                          hobby,
                         ),
                       ),
                     ),
                   );
                 },
-                itemCount: 4,
+                itemCount: dataHobbyDummy.length,
               ),
             ),
             const SizedBox(
