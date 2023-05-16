@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sarang_app/src/features/likes_you/domain/user.dart';
 import 'package:sarang_app/src/features/likes_you/presentation/people_profile_screen.dart';
 import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 import 'package:sarang_app/src/theme_manager/color_manager.dart';
@@ -7,7 +8,12 @@ import 'package:sarang_app/src/theme_manager/style_manager.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
 
 class PeopleYouLovedCardWidget extends StatelessWidget {
-  const PeopleYouLovedCardWidget({super.key});
+  const PeopleYouLovedCardWidget({
+    super.key,
+    required this.user,
+  });
+
+  final User user;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +23,11 @@ class PeopleYouLovedCardWidget extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, PeopleProfileScreen.routeName);
+          Navigator.pushNamed(
+            context,
+            PeopleProfileScreen.routeName,
+            arguments: user,
+          );
         },
         child: Container(
           margin: const EdgeInsets.only(
@@ -34,25 +44,25 @@ class PeopleYouLovedCardWidget extends StatelessWidget {
             leading: Container(
               width: AppSize.s70,
               height: AppSize.s70,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                    '${AssetImageIconManager.assetPath}/people_love3_image.png',
+                    user.imagePath,
                   ),
                 ),
               ),
             ),
             title: Text(
-              'Ismirada',
+              user.fullName,
               style: getWhiteTextStyle(
                 fontSize: FontSizeManager.f20,
                 fontWeight: FontWeightManager.semiBold,
               ),
             ),
             subtitle: Text(
-              '24, Doctor',
+              '${user.age}, ${user.occupation}',
               style: getGrey60TextStyle(),
             ),
           ),
