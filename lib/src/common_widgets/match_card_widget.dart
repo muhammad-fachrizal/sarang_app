@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sarang_app/src/common_widgets/glass_card_widget.dart';
 import 'package:sarang_app/src/features/likes_you/domain/user.dart';
-import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 import 'package:sarang_app/src/theme_manager/color_manager.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
 

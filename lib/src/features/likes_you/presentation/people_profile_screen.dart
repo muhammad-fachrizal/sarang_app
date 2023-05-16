@@ -4,7 +4,6 @@ import 'package:sarang_app/src/common_widgets/people_identity_widget.dart';
 import 'package:sarang_app/src/common_widgets/profile_detail_image_widget.dart';
 import 'package:sarang_app/src/features/likes_you/data/data_hobby_dummy.dart';
 import 'package:sarang_app/src/features/likes_you/domain/user.dart';
-import 'package:sarang_app/src/theme_manager/asset_image_icon_manager.dart';
 import 'package:sarang_app/src/theme_manager/values_manager.dart';
 
 class PeopleProfileScreen extends StatelessWidget {

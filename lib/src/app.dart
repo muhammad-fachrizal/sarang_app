@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sarang_app/src/features/authentication/data/data_user_account_local.dart';
-import 'package:sarang_app/src/features/authentication/presentation/sign_up_age_job_screen.dart';
 import 'package:sarang_app/src/features/authentication/presentation/sign_up_screen.dart';
 import 'package:sarang_app/src/features/authentication/presentation/sign_up_upload_photo_screen.dart';
 import 'package:sarang_app/src/features/likes_you/presentation/explore_people_screen.dart';
