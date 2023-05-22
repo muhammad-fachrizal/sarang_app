@@ -6,10 +6,10 @@ A simple Tinder clone android application with 3 available screens: Register, Ex
 **Screenshot** <br/>
 - Register <br/>
 <p float="left">
-  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_name-mail-pass.png" width="20%" height="20%"> 
-  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_occupation-age.png" width="20%" height="20%"> 
-  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_profile-picture.png" width="20%" height="20%"> 
-  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_update-profile.png" width="20%" height="20%"> 
+  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_name-mail-pass.png" width="40%" height="40%"> 
+  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_occupation-age.png" width="40%" height="40%"> 
+  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_profile-picture.png" width="40%" height="40%"> 
+  <img src="https://github.com/muhammad-fachrizal/sarang_app/blob/master/screenshot/register_update-profile.png" width="40%" height="40%"> 
 </p>
 
 - Explore <br/>
